@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>30's Fams</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="googlesheet.css">
+</head>
+
+<body>
+<div class="tablet">
+  
+  <div class="screen">
+
+    <div class="header">
+      <div>
+        <h1>30's Shop</h1>
+      </div>
+
+      <div class="special-menu" id="specialMenu">
+        <div class="special-item active" data-filter="all">All</div>
+        <div class="special-item" data-filter="class1">Class 1</div>
+        <div class="special-item" data-filter="class2">Class 2</div>
+        <div class="special-item" data-filter="class3">Class 3</div>
+        <div class="special-item" data-filter="ammo">Ammo</div>
+        <div class="special-item" data-filter="guard">Vest</div>
+      </div>
+
+      <div class="header-right">
+       <input type="text" id="memberInput" class="member-input" placeholder="Drop your IC name">
+        <div class="toggle" id="posToggle">cashier mode : OFF</div>
+        <div class="logo">
+          <img src="assets/logo.png" alt="Logo">
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="content">
+        <div class="grid" id="grid"></div>
+      </div>
+
+      <aside class="cashier" id="cashierPanel" aria-hidden="true">
+        <div class="cashier-head">
+          <div class="cashier-title">Cashier (POS)</div>
+          <div class="badge" id="memberBadge">Member A</div>
+        </div>
+
+        <div class="cart" id="cart">
+          <div class="small">Ain’t picked nothing yet.</div>
+        </div>
+
+        <div class="cashier-foot">
+          <div class="row"><span>Total Qty</span><strong id="posQty">0</strong></div>
+          <div class="row"><span>Price Total</span><strong id="posTotal">Rp 0</strong></div>
+
+          <div class="input">
+            <span class="small">Money payment</span>
+            <input id="cashInput" type="number" min="0" step="1000">
+          </div>
+
+          <div class="btns">
+            <button class="btn danger" id="resetBtn">Reset</button>
+            <button class="btn primary" id="payBtn">pay</button>
+          </div>
+
+          <div class="small" id="posNote"></div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="footer">
+      <div class="kpi">
+        <span>Member: <strong id="memberKpi">Member A</strong></span>
+        <span>Total Qty: <strong id="totalQty">0</strong></span>
+        <span>Total Harga: <strong id="totalPrice">Rp 0</strong></span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- JS -->
+<script src="script.js"></script>
+</body>
+</html>
